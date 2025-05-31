@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profession Management System</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        .container h3{
+            font-size: 1.5rem;
+        }
+        .input-box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            border: none;          
+        }
+        .box input{
+            background-color: black;
+            border: 1px solid white;
+            height: 25px;
+            width: 250px;
+            padding: 8px 12px;
+            margin-top: 7px;
+            color: white;
+        }
+        .btn{
+            margin-left: 12px;
+            width: 100px;
+            padding: 8px 12px;
+            margin-top: 20px;
+        }
+        .added-employees{
+            margin: 12px 12px;
+            font-size: 1.2rem;
+        }
+        #employee-list p{
+            color: white;
+        }
+        .error{
+            color: red;
+            margin-top: 10px;
+        }
+        .success{
+            color: green;
+        }
+        .employee-card{
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .employee-info{
+            border: 1px solid white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            display: flex;
+            width: 40%;
+            justify-content: space-around;
+        }
+        .deleteBtn{
+            width: 125px;
+            border-radius: 20px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>New Employees</h3>
+        <div class="input-box">
+            <div class="box">
+                <label>Enter Name</label>
+                <input type="text" id="empName" placeholder="Enter Name" required />
+            </div>
+            <div class="box">
+                <label>Enter Profession</label>
+                <input type="text" id="empProfession" placeholder="Enter Profession" required />
+            </div>
+            <div class="box">
+                <label>Enter Age</label>
+                <input type="number" id="age" placeholder="Enter Age" required />
+            </div>
+        </div>
+        <button type="submit" class="btn" id="addBtn" onclick="handleSubmit()">Add User</button>
+    
+        <div class="msg" id="message"></div>
+        <p class="added-employees">Added Employees</p>
+        <div id="employee-list">
+            <p>You have 0 Employees.</p>
+        </div>
+    </div>
+
+<script src="./script.js"></script>
+</body>
+</html>
